@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Prime Time Services</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="red-top">
+        <span><img src="images/English.png" alt="English"/></span>
+        <span><img src="images/Español.png" alt="Español"/></span>
+        <span><i class="fa fa-phone"></i> 1-800-733-8267</span>
+      </div>
+      <div class="container" id="logoSection">
+        <div class="row">
+          <div class="col-md-3 align-self-center">
+            <img
+              class="img"
+              src="images/primetime shuttle services logo.png"
+              alt="PTS Logo"
+            />
+          </div>
+          <div class="col-md-9">
+            <ul id="mainMenu">
+              <li>Services</li>
+              <li>Service Location</li>
+              <li>Blog</li>
+              <li>Arrival Instructions</li>
+              <li>Events and Specials</li>
+              <li>Help</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section id="bannerVideo">
+      <div class="background-overlay"></div>
+      <video
+        autoplay
+        muted
+        loop
+        id="myVideo"
+        poster="images/Car-static-img.png"
+      >
+        <source src="car-video.mp4" type="video/mp4" />
+        Your browser does not support HTML5 video.
+      </video>
+      <div class="title-banner">
+        <h2>
+          BOOK OUR NEW IMPROVED SERVICE
+        </h2>
+        <h3>Prime Time Serving SOCAL since 1984</h3>
+      </div>
+    </section>
+
+    <section id="bookingForm">
+      <div class="wrapper">
+        <div class="radio">
+          <label class="radio-inline"
+            ><input type="radio" name="optradio" checked />Round Trip</label
+          >
+          <label class="radio-inline"
+            ><input type="radio" name="optradio" />One Way</label
+          >
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <input
+              type="text"
+              class="form-control input-location"
+              placeholder="Enter Pickup Location"
+            />
+          </div>
+          <div class="col-md-6">
+            <input
+              type="text"
+              class="form-control input-location"
+              placeholder="Enter Dropoff Location"
+            />
+          </div>
+        </div>
+        <div class="quote-div">
+          <button type="button" class="btn quote-btn">Get A Quote</button>
+        </div>
+        <div class="row ride-options">
+          <div class="col-md-6 text-right">
+            <span><i aria-hidden="true" class="fa fa-edit"></i></span
+            ><span> Edit / Cancel Ride</span>
+          </div>
+          <div class="col-md-6 text-left">
+            <span><i aria-hidden="true" class="fa fa-compass"></i></span
+            ><span> Track Your Vehicle</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container">
+        <div class="title">
+          <h2>
+            New! Improved! Services offerings to <br />
+            <span class="highlight-red">meet your needs!</span>
+          </h2>
+          <h3>Provided by OPOLI TNC our new web and app based service</h3>
+          <div class="texts">
+            <p>
+              With the aim to provide you with the best possible service, we're
+              introducing new ride service options to better suit your
+              transportation needs and your pocketbook!
+            </p>
+            <p class="learn-more-paragraph">
+              Available service selections are based on the number of people in
+              your party so you are assured you always picked up with the proper
+              vehicle. Our offering ranges from the basic shared ride service,
+              Sedan and SUV services all the way to 9-passenger vans able to
+              accommodate large groups of travelers. Whatever transportation
+              needs you have, we’ve got you covered.
+            </p>
+            <div class="learn-more">
+              <button type="button" class="btn" id="learnBtn">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="car-slider">
+          <div id="cars" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators" id="carouselIndicators"></ol>
+            <div class="carousel-inner" id="carouselInner"></div>
+            <!-- <a
+            class="carousel-control-prev"
+            href="#cars"
+            role="button"
+            data-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a> -->
+            <a
+              class="carousel-control-next"
+              href="#cars"
+              role="button"
+              data-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon animated infinite fadeInRight slow"
+                aria-hidden="true"
+              ></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="description">
+      <div class="container"></div>
+    </section>
+
+    <section id="cellphone">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-5">
+            <img
+              src="images/pts_phone.png"
+              alt="pts_phone"
+              height="690px"
+              class="img-fluid"
+            />
+          </div>
+          <div class="col-md-7 align-self-center">
+            <div class="headers">
+              <h2>Professional drivers and Immaculate vehicles!</h2>
+              <h5>
+                Our service is a cut above - start and end your trip off right!
+              </h5>
+            </div>
+            <div class="row-icons">
+              <div class="row">
+                <div class="col-sm-3">
+                  <div class="icons">
+                    <img src="images/calendar.png" alt="calendar" />
+                  </div>
+                  <div class="icon-text">
+                    <p>
+                      Make reservation faster without having to talk to an
+                      agent.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                  <div class="icons">
+                    <img src="images/smartphone.png" alt="smartphone" />
+                  </div>
+                  <div class="icon-text">
+                    <p>
+                      Save your favorite locations such as "Home" or "Work".
+                    </p>
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                  <div class="icons">
+                    <img src="images/app.png" alt="app" />
+                  </div>
+                  <div class="icon-text">
+                    <p>
+                      Get picked up on-demand with just the click of a button.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                  <div class="icons">
+                    <img src="images/credit-card.png" alt="credit-card" />
+                  </div>
+                  <div class="icon-text">
+                    <p>
+                      Avoid entering your payment information each time by
+                      safely and securely saving it to your account.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="stores">
+              <div class="row">
+                <div class="col-sm-6 text-right">
+                  <div class="img-store">
+                    <img
+                      src="images/app-store.png"
+                      alt="app-store"
+                      class="img-fluid"
+                    />
+                  </div>
+                </div>
+                <div class="col-sm-6 text-left">
+                  <div class="img-store">
+                    <img
+                      src="images/play-store.png"
+                      alt="play-store"
+                      class="img-fluid"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="newPTS">
+      <div class="container">
+        <div class="headers">
+          <h2>New Prime Time Services</h2>
+          <h5>We offer more than just an airport</h5>
+        </div>
+        <div class="services">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="img-text">
+                  <img src="images/pts-1.png" alt="pts-1" class="img-fluid" />
+                  <h3>On-Time Service</h3>
+                  <p>
+                    Today, in addition to continuing to set the highest quality
+                    standards, Prime Time Shuttle remains the only shuttle
+                    service in Southern California to offer an on-time
+                    guarantee. We’re on time or your ride is free!
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="img-text">
+                  <img src="images/pts-2.png" alt="pts-2" class="img-fluid" />
+                  <h3>Safe and Efficient Route</h3>
+                  <p>
+                    There is a shuttle service and then there is a good shuttle
+                    service. It’s easy to say that you provide a shuttle
+                    service, but without the state-of-the-art software, which
+                    Prime Time has developed over the years, providing service
+                    can become a nightmare experience.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="img-text">
+                  <img src="images/pts-3.png" alt="pts-3" class="img-fluid" />
+                  <h3>Professional Drivers</h3>
+                  <p>
+                    All of Prime Time Shuttle’s drivers are caring professionals
+                    that understand that your comfort and safety is their number
+                    one priority.
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="img-text">
+                  <img src="images/pts-4.png" alt="pts-4" class="img-fluid" />
+                  <h3>Immaculate Van</h3>
+                  <p>
+                    It’s this attention to detail that sets us apart from the
+                    other companies who often place cutting corners ahead of
+                    your comfort. Also, we have different services that suits
+                    your needs according to your preferences - time, luggage or
+                    style.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="top-footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="footer-logo">
+                <img
+                  src="images/primetime-shuttle-services-logo-white.png"
+                  alt="pts-logo-white"
+                  class="img-fluid"
+                />
+              </div>
+              <hr />
+              <div class="footer-menu">
+                <ul>
+                  <li>
+                    <span class="icon">
+                      <i aria-hidden="true" class="fa fa-phone"></i>
+                    </span>
+                    <span>(800) RED-VANS</span>
+                  </li>
+                  <li>
+                    <span class="icon">
+                      <i aria-hidden="true" class="fa fa-envelope"></i>
+                    </span>
+                    <span>customerservice@primetimeshuttle.com</span>
+                  </li>
+                  <li>
+                    <span class="icon">
+                      <i aria-hidden="true" class="fa fa-map-marker"></i> </span
+                    ><span>4520 W. Imperial Hwy, Inglewood, CA 90304</span>
+                  </li>
+                  <li>
+                    <span class="icon">
+                      <i aria-hidden="true" class="fa fa-globe"></i> </span
+                    ><span>Contact Us</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-8">
+              <div class="row">
+                <div class="col-md-3 col-sm-6">
+                  <b>Company</b>
+                  <hr />
+                  <ul>
+                    <li>About</li>
+                    <li>Careers</li>
+                    <li>Services</li>
+                    <li>Affiliates</li>
+                    <li>Go Network</li>
+                  </ul>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                  <b>Need Help?</b>
+                  <hr />
+                  <ul>
+                    <li>Help Center</li>
+                    <li>Blog</li>
+                    <li>Terms</li>
+                    <li>Privacy Policy</li>
+                    <li>Ride Policy</li>
+                  </ul>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                  <b>Drive With Us</b>
+                  <hr />
+                  <ul>
+                    <li>Download the App</li>
+                    <li>Shared Ride</li>
+                    <li>Private Vehicle</li>
+                    <li>Luxury SUV</li>
+                    <li>Executive Sedan</li>
+                    <li>Private Van</li>
+                  </ul>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                  <b>Connect</b>
+                  <hr />
+                  <ul>
+                    <li>
+                      <span class="icon"
+                        ><i aria-hidden="true" class="fa fa-facebook"></i
+                      ></span>
+                      <span>Facebook</span>
+                    </li>
+                    <li>
+                      <span class="icon"
+                        ><i aria-hidden="true" class="fa fa-twitter"></i
+                      ></span>
+                      <span>Twitter</span>
+                    </li>
+                    <li>
+                      <span class="icon"
+                        ><i aria-hidden="true" class="fa fa-instagram"></i
+                      ></span>
+                      <span>Instagram</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bottom-footer">
+        <div class="container">
+          <div class="footer-text">
+            <p>Copyright © 2019 PrimeTimeServices.com. All Rights Reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $.ajax({
+          url: "https://gateway.opoli.com/2.0/service",
+          type: "GET",
+          dataType: "json", // added data type
+          success: function(res) {
+            let count = 0;
+            res.list.map(function(items) {
+              if (count != 0) {
+                $("#carouselIndicators").append(
+                  `<li data-target="#cars" data-slide-to="${count}"></li>`
+                );
+
+                $("#carouselInner").append(`
+                <div class="car carousel-item container">
+                  <div class="bg-name">
+                    <h3 class="car-name animated fadeIn delay-1s">${
+                      items.name
+                    }</h3>
+                  </div>
+                  <div class="row">
+                  <div class="col-md-6 align-self-center">
+                    <div class="car-details animated fadeIn delay-1s">
+                      <div class="flip-card-inner flip${items.id}">
+                        <div class="card-front">
+                          <p>${items.slogan}</p>
+                          <h3>${items.name}</h3>
+                          <button type="button" 
+                          class="btn view-btn" 
+                          id="${items.id}">View Details</button>
+                        </div>
+                        <div class="card-back">
+                          <p>${items.excerptApp}</p>
+                          <p>${items.descriptionWeb}</p>
+                          <p>${items.advantageApp}</p>
+                          <p>${items.stops}</p>
+                          
+                          <button type="button" 
+                          class="btn view-back-btn" 
+                          id="back${items.id}">← Back</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                  <img 
+                  src="${items.image}" 
+                  alt="${items.name}" 
+                  class="car-img img-fluid animated fadeIn delay-1s">
+                  </div>
+                  </div>
+                  <h4 class="animated fadeIn delay-1s">${items.excerptWeb}</h4>
+                </div>
+                `);
+              }
+              $("#carouselIndicators li:first").addClass("active");
+              $("#carouselInner div:first").addClass("active");
+              count++;
+            });
+          }
+        });
+        $(document).on("click", ".view-btn", function(e) {
+          var id = ".flip" + e.target.id;
+          $(id).toggleClass("flip-active");
+        });
+        $(document).on("click", ".view-back-btn", function(e) {
+          var id = ".flip" + e.target.id.replace("back", "");
+          $(id).toggleClass("flip-active");
+        });
+        $(document).on("click", "#learnBtn", function(e) {
+          $(".learn-more-paragraph").show();
+          $(".learn-more").hide();
+        });
+        $("#cars").carousel({
+          interval: 5000
+        });
+        // $("#cars").swipeleft(function() {
+        //   $(this).carousel("next");
+        // });
+      });
+    </script>
+  </body>
+</html>
