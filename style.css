@@ -12,29 +12,34 @@ header {
   width: 100%;
   z-index: 100;
 }
-.red-top {
+header .red-top {
   background-color: #d8262b;
   color: #fff;
   padding: 10px;
   text-align: right;
 }
 
-.red-top span {
+header .red-top span {
   font-size: 15px;
   padding: 5px;
   cursor: pointer;
 }
 
-#logoSection {
+header #logoSection {
   padding: 20px;
 }
 
-#mainMenu {
-  list-style: none;
-  white-space: nowrap;
+header #logoImg {
+  width: 100%;
 }
 
-#mainMenu li {
+header #mainMenu {
+  list-style: none;
+  white-space: nowrap;
+  margin-bottom: 0;
+}
+
+header #mainMenu li {
   /* float: left; */
   display: inline-block;
   color: white;
@@ -64,7 +69,7 @@ header {
   z-index: 1;
 }
 
-#myVideo {
+#bannerVideo #myVideo {
   position: absolute;
   right: 0;
   bottom: 0;
@@ -73,7 +78,7 @@ header {
   object-fit: cover;
 }
 
-.title-banner {
+#bannerVideo .title-banner {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -83,13 +88,13 @@ header {
   text-align: center;
 }
 
-.title-banner h2 {
+#bannerVideo .title-banner h2 {
   color: #fff;
   font-size: 50px;
   font-weight: 600;
 }
 
-.title-banner h3 {
+#bannerVideo .title-banner h3 {
   color: #fff;
   font-size: 25px;
   font-weight: 600;
@@ -164,6 +169,7 @@ header {
 
 #services {
   text-align: center;
+  padding-bottom: 60px;
 }
 
 #services .title {
@@ -192,7 +198,8 @@ header {
 }
 
 #services .learn-more-paragraph {
-  display: none;
+  font-size: 15px;
+  color: #7a7a7a;
 }
 #services .learn-more .btn {
   border: 1px solid #d8262b;
@@ -207,8 +214,9 @@ header {
   color: #fff;
 }
 
-.highlight-red {
+#services .highlight-red {
   color: #d8262b;
+  display: block;
 }
 
 #cars {
@@ -289,10 +297,16 @@ header {
 }
 
 .backface-unset {
+  -webkit-perspective: 0;
+  -webkit-backface-visibility: hidden;
+  visibility: visible;
   backface-visibility: hidden;
 }
 
 .card-back {
+  -webkit-perspective: 0;
+  -webkit-backface-visibility: hidden;
+  visibility: visible;
   backface-visibility: hidden;
   text-align: left;
   transform: rotateX(180deg);
@@ -300,38 +314,6 @@ header {
 .car-img {
   width: 400px;
 }
-
-/* .carousel-item {
-  transition: -webkit-transform 2s ease;
-  transition: transform 2s ease;
-  transition: transform 2s ease, -webkit-transform 2s ease;
-} */
-
-/* .carousel-fade .carousel-item {
-  opacity: 0;
-  transition-duration: 0.6s;
-  transition-property: opacity;
-}
-
-.carousel-fade .carousel-item.active,
-.carousel-fade .carousel-item-next.carousel-item-left,
-.carousel-fade .carousel-item-prev.carousel-item-right {
-  opacity: 1;
-}
-
-.carousel-fade .active.carousel-item-left,
-.carousel-fade .active.carousel-item-right {
-  opacity: 0;
-}
-
-.carousel-fade .carousel-item-next,
-.carousel-fade .carousel-item-prev,
-.carousel-fade .carousel-item.active,
-.carousel-fade .active.carousel-item-left,
-.carousel-fade .active.carousel-item-prev {
-  transform: translateX(0);
-  transform: translate3d(0, 0, 0);
-} */
 
 .carousel-control-next-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
@@ -342,7 +324,8 @@ header {
 }
 
 .carousel-control-prev {
-  left: -110px;
+  left: -80px;
+  width: 6%;
 }
 .carousel-control-next {
   right: -35px;
@@ -360,6 +343,14 @@ header {
   background-color: #d8262b;
   padding-top: 50px;
 }
+
+/* #cellphone .phone-img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+} 
+PARALAX EFFECT!
+*/
 
 #cellphone .headers {
   text-align: center;
@@ -483,4 +474,43 @@ footer .bottom-footer .footer-text p {
 
 .top-footer b {
   color: #fff;
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  header #mainMenu li {
+    padding: 10px;
+  }
+
+  #bannerVideo .title-banner h2 {
+    font-size: 48px;
+  }
+
+  #services .title h2 {
+    font-size: 43px;
+  }
+
+  #services .carousel-control-prev {
+    left: -70px;
+  }
+
+  #cellphone .phone-img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+  }
+
+  #cellphone .img-store img {
+    width: 80%;
+  }
+
+  .top-footer .col {
+    padding: 0 10px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  header #logoSection {
+    display: none;
+  }
 }
