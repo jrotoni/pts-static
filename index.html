@@ -24,9 +24,34 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"
     />
     <link rel="stylesheet" href="style.css" />
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="images/favicon/favicon-32x32.png"
+      sizes="32x32"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="images/favicon/favicon-16x16.png"
+      sizes="16x16"
+    />
+    <link rel="manifest" href="images/favicon/manifest.json" />
+    <link
+      rel="mask-icon"
+      href="images/favicon/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <meta name="theme-color" content="#ffffff" />
   </head>
   <body>
-    <header>
+    <header id="desktopMenu">
       <div class="red-top">
         <span><img src="images/English.png" alt="English"/></span>
         <span><img src="images/Español.png" alt="Español"/></span>
@@ -43,17 +68,48 @@
             />
           </div>
           <div class="col-lg-9 col-md-10 align-items-center">
-            <ul id="mainMenu">
-              <li>Services</li>
-              <li>Service Location</li>
-              <li>Blog</li>
-              <li>Arrival Instructions</li>
-              <li>Events and Specials</li>
-              <li>Help</li>
-            </ul>
+            <nav>
+              <ul id="mainMenu">
+                <li>Services</li>
+                <li>Service Location</li>
+                <li>Blog</li>
+                <li>Arrival Instructions</li>
+                <li>Events and Specials</li>
+                <li>Help</li>
+              </ul>
+            </nav>
           </div>
         </div>
       </div>
+    </header>
+
+    <header id="mobileMenu">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6">
+            <img
+              src="images/primetime-shuttle-services-logo-white.png"
+              alt="pts-logo-white"
+              class="img-fluid mobile-logo"
+            />
+          </div>
+          <div class="col-sm-6">
+            <a href="javascript:void(0)" class="menuBtn">
+              <span class="lines"></span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <nav class="mainMenu">
+        <ul class="mobile-menu">
+          <li>Services</li>
+          <li>Service Location</li>
+          <li>Blog</li>
+          <li>Arrival Instructions</li>
+          <li>Events and Specials</li>
+          <li>Help</li>
+        </ul>
+      </nav>
     </header>
 
     <section id="bannerVideo">
@@ -106,11 +162,11 @@
           <button type="button" class="btn quote-btn">Get A Quote</button>
         </div>
         <div class="row ride-options">
-          <div class="col-md-6 text-right">
+          <div class="col-sm-6 push-right center-mobile">
             <span><i aria-hidden="true" class="fa fa-edit"></i></span
             ><span> Edit / Cancel Ride</span>
           </div>
-          <div class="col-md-6 text-left">
+          <div class="col-sm-6 push-left center-mobile">
             <span><i aria-hidden="true" class="fa fa-compass"></i></span
             ><span> Track Your Vehicle</span>
           </div>
@@ -132,19 +188,6 @@
               introducing new ride service options to better suit your
               transportation needs and your pocketbook!
             </p>
-            <!-- <p class="learn-more-paragraph">
-              Available service selections are based on the number of people in
-              your party so you are assured you always picked up with the proper
-              vehicle. Our offering ranges from the basic shared ride service,
-              Sedan and SUV services all the way to 9-passenger vans able to
-              accommodate large groups of travelers. Whatever transportation
-              needs you have, we’ve got you covered.
-            </p> -->
-            <!-- <div class="learn-more">
-              <button type="button" class="btn" id="learnBtn">
-                Learn More
-              </button>
-            </div> -->
           </div>
         </div>
         <div class="car-slider">
@@ -191,7 +234,7 @@
     <section id="cellphone">
       <div class="container">
         <div class="row">
-          <div class="col-md-5">
+          <div class="col-lg-5">
             <img
               src="images/pts_phone.png"
               alt="pts_phone"
@@ -199,7 +242,7 @@
               class="img-fluid phone-img"
             />
           </div>
-          <div class="col-md-7 align-self-center">
+          <div class="col-lg-7 align-self-center">
             <div class="headers">
               <h2>Professional drivers and Immaculate vehicles!</h2>
               <h5>
@@ -208,7 +251,7 @@
             </div>
             <div class="row-icons">
               <div class="row">
-                <div class="col-sm-3">
+                <div class="col-sm-6 col-md-3">
                   <div class="icons">
                     <img src="images/calendar.png" alt="calendar" />
                   </div>
@@ -219,7 +262,7 @@
                     </p>
                   </div>
                 </div>
-                <div class="col-sm-3">
+                <div class="col-sm-6 col-md-3">
                   <div class="icons">
                     <img src="images/smartphone.png" alt="smartphone" />
                   </div>
@@ -229,7 +272,7 @@
                     </p>
                   </div>
                 </div>
-                <div class="col-sm-3">
+                <div class="col-sm-6 col-md-3">
                   <div class="icons">
                     <img src="images/app.png" alt="app" />
                   </div>
@@ -239,7 +282,7 @@
                     </p>
                   </div>
                 </div>
-                <div class="col-sm-3">
+                <div class="col-sm-6 col-md-3">
                   <div class="icons">
                     <img src="images/credit-card.png" alt="credit-card" />
                   </div>
@@ -254,7 +297,7 @@
             </div>
             <div class="stores">
               <div class="row">
-                <div class="col-sm-6 text-right">
+                <div class="col-6 text-right">
                   <div class="img-store">
                     <img
                       src="images/app-store.png"
@@ -263,7 +306,7 @@
                     />
                   </div>
                 </div>
-                <div class="col-sm-6 text-left">
+                <div class="col-6 text-left">
                   <div class="img-store">
                     <img
                       src="images/play-store.png"
@@ -372,7 +415,9 @@
                     <span class="icon">
                       <i aria-hidden="true" class="fa fa-envelope"></i>
                     </span>
-                    <span>customerservice@primetimeshuttle.com</span>
+                    <span class="customer-service"
+                      >customerservice@primetimeshuttle.com</span
+                    >
                   </li>
                   <li>
                     <span class="icon">
@@ -389,7 +434,7 @@
             </div>
             <div class="col-lg-7">
               <div class="row">
-                <div class="col col-md-3 col-sm-6">
+                <div class="col-footer col-md-3 col-sm-6">
                   <b>Company</b>
                   <hr />
                   <ul>
@@ -400,7 +445,7 @@
                     <li>Go Network</li>
                   </ul>
                 </div>
-                <div class="col col-md-3 col-sm-6">
+                <div class="col-footer col-md-3 col-sm-6">
                   <b>Need Help?</b>
                   <hr />
                   <ul>
@@ -411,7 +456,7 @@
                     <li>Ride Policy</li>
                   </ul>
                 </div>
-                <div class="col col-md-3 col-sm-6">
+                <div class="col-footer col-md-3 col-sm-6">
                   <b>Drive With Us</b>
                   <hr />
                   <ul>
@@ -423,7 +468,7 @@
                     <li>Private Van</li>
                   </ul>
                 </div>
-                <div class="col col-md-3 col-sm-6">
+                <div class="col-footer col-md-3 col-sm-6">
                   <b>Connect</b>
                   <hr />
                   <ul>
@@ -475,6 +520,7 @@
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"
     ></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.4/jquery.touchSwipe.min.js"></script>
 
     <script type="text/javascript">
       $(document).ready(function() {
@@ -498,7 +544,7 @@
                       items.name
                     }</h3>
                   </div>
-                  <div class="row">
+                  <div class="row flex-column-reverse flex-md-row car-row">
                   <div class="col-md-6 align-self-center">
                     <div class="car-details animated fadeIn delay-1s">
                       <div class="flip-card-inner flip${items.id}">
@@ -567,29 +613,32 @@
             $(card).removeClass("backface-unset");
           }, 500);
         });
-        $(document).on("click", "#learnBtn", function(e) {
-          $(".learn-more-paragraph").fadeIn(1000);
-          $(".learn-more").hide();
+        $(".menuBtn").click(function() {
+          $(this).toggleClass("act");
+          if ($(this).hasClass("act")) {
+            $(".mainMenu").addClass("act");
+          } else {
+            $(".mainMenu").removeClass("act");
+          }
         });
         $("#cars").carousel({
           interval: 5000
         });
-        // $("#cars").swipeleft(function() {
-        //   $(this).carousel("next");
-        // });
+        $(".carousel").swipe({
+          swipe: function(
+            event,
+            direction,
+            distance,
+            duration,
+            fingerCount,
+            fingerData
+          ) {
+            if (direction == "left") $(this).carousel("next");
+            if (direction == "right") $(this).carousel("prev");
+          },
+          allowPageScroll: "vertical"
+        });
       });
     </script>
-    <!-- <div class="service-max">
-        <div class="pax-luggage">
-            <i class="fa fa-circle fa-stack-2x"></i>
-            <i class="fa fa-user fa-stack-1x fa-inverse"></i>
-            <span>${items.maxPassengers} max</span>
-        </div>
-        <div class="pax-luggage">
-            <i class="fa fa-circle fa-stack-2x"></i>
-            <i class="fa fa-suitcase fa-stack-1x fa-inverse"></i>
-            <span>${items.maxLuggages} max</span>
-        </div>
-      </div> -->
   </body>
 </html>

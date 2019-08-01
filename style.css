@@ -3,49 +3,57 @@
   font-family: "Montserrat", sans-serif;
   margin: 0;
   padding: 0;
+  text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  -ms-text-size-adjust: none;
 }
 /* --> */
 
 /* HEADER */
-header {
+#desktopMenu {
   position: absolute;
   width: 100%;
   z-index: 100;
 }
-header .red-top {
+#desktopMenu .red-top {
   background-color: #d8262b;
   color: #fff;
   padding: 10px;
   text-align: right;
 }
 
-header .red-top span {
+#desktopMenu .red-top span {
   font-size: 15px;
   padding: 5px;
   cursor: pointer;
 }
 
-header #logoSection {
+#desktopMenu #logoSection {
   padding: 20px;
 }
 
-header #logoImg {
+#desktopMenu #logoImg {
   width: 100%;
 }
 
-header #mainMenu {
+#desktopMenu #mainMenu {
   list-style: none;
   white-space: nowrap;
   margin-bottom: 0;
 }
 
-header #mainMenu li {
+#desktopMenu #mainMenu li {
   /* float: left; */
   display: inline-block;
   color: white;
   text-align: center;
   padding: 16px;
   cursor: pointer;
+}
+
+#mobileMenu {
+  display: none;
 }
 
 /* --> */
@@ -81,7 +89,7 @@ header #mainMenu li {
 #bannerVideo .title-banner {
   position: absolute;
   left: 50%;
-  top: 50%;
+  top: 46%;
   transform: translate(-50%, -50%);
   width: 100%;
   z-index: 1000;
@@ -112,7 +120,7 @@ header #mainMenu li {
 
 #bookingForm .wrapper {
   background-color: #fff;
-  height: 300px;
+  min-height: 300px;
   width: 100%;
   max-width: 700px;
   padding: 50px;
@@ -159,6 +167,14 @@ header #mainMenu li {
   font-size: 15px;
   padding: 10px 24px;
   font-weight: 400;
+}
+
+#bookingForm .push-left {
+  text-align: left;
+}
+
+#bookingForm .push-right {
+  text-align: right;
 }
 
 #bookingForm .ride-options {
@@ -220,7 +236,7 @@ header #mainMenu li {
 }
 
 #cars {
-  min-height: 50vh;
+  /* min-height: 50vh; */
 }
 
 .car {
@@ -504,7 +520,7 @@ footer .bottom-footer .footer-text p {
 }
 
 @media (min-width: 1025px) and (max-width: 1280px) {
-  header #mainMenu li {
+  #desktopMenu #mainMenu li {
     padding: 10px;
   }
 
@@ -531,13 +547,307 @@ footer .bottom-footer .footer-text p {
     width: 80%;
   }
 
-  .top-footer .col {
+  .top-footer .col-footer {
     padding: 0 10px;
   }
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
-  header #logoSection {
+@media (min-width: 230px) and (max-width: 1024px) {
+  #desktopMenu {
     display: none;
+  }
+
+  #mobileMenu {
+    display: block;
+    padding: 15px 10px;
+    background-color: #d8262b;
+    position: fixed;
+    width: 100%;
+    z-index: 10000;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.37);
+  }
+
+  #mobileMenu .mobile-logo {
+    max-width: 90%;
+  }
+  .menuBtn {
+    height: 18px;
+    width: 30px;
+    position: fixed;
+    right: 20px;
+    top: 25px;
+    z-index: 101;
+    cursor: pointer;
+  }
+  .menuBtn > span {
+    background-color: #fff;
+    border-radius: 1px;
+    height: 4px;
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -1px 0 0 -15px;
+    transition: height 100ms;
+  }
+  .menuBtn > span:after,
+  .menuBtn > span:before {
+    content: "";
+    background-color: #fff;
+    border-radius: 1px;
+    height: 4px;
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    margin-left: -15px;
+    transition: all 200ms;
+  }
+  .menuBtn > span:after {
+    top: -10px;
+  }
+  .menuBtn > span:before {
+    bottom: -10px;
+  }
+  .menuBtn.act > span {
+    height: 0;
+  }
+  .menuBtn.act > span:after,
+  .menuBtn.act > span:before {
+    top: 1px;
+  }
+  .menuBtn.act > span:after {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  .menuBtn.act > span:before {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+  .mainMenu {
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    top: 70px;
+    z-index: 100;
+    height: 92vh;
+    width: 100vw;
+    display: table;
+    text-align: center;
+    opacity: 0;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    -webkit-transform: rotateX(90deg);
+    transform: rotateX(90deg);
+    transform-origin: top;
+  }
+  .mainMenu.act {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  .mainMenu.act ul li {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  .mainMenu ul {
+    display: table-cell;
+    vertical-align: middle;
+    list-style: none;
+  }
+  .mainMenu li {
+    padding: 8px 0;
+    transition: all 400ms 510ms;
+    opacity: 0;
+  }
+  .mainMenu li:nth-child(odd) {
+    -webkit-transform: translateX(30%);
+    transform: translateX(30%);
+  }
+  .mainMenu li:nth-child(even) {
+    -webkit-transform: translateX(-30%);
+    transform: translateX(-30%);
+  }
+  .mainMenu li:last-child {
+    -webkit-transform: none;
+    transform: none;
+  }
+
+  #bannerVideo .title-banner {
+    padding: 30px;
+  }
+
+  #bannerVideo .title-banner h3 {
+    font-size: 20px;
+  }
+
+  #services .texts {
+    margin-top: 25px;
+  }
+
+  #services .title {
+    padding: 10px;
+  }
+
+  #services .carousel-control-next {
+    right: 0;
+  }
+  #services .carousel-control-prev {
+    left: 0;
+  }
+
+  #services .card-front p {
+    font-size: 25px;
+    line-height: 20px;
+  }
+
+  #services .card-front h3 {
+    font-size: 75px;
+  }
+
+  #services .car-row {
+    margin-bottom: 10px;
+  }
+
+  #carouselInner h4 {
+    font-size: 18px;
+  }
+
+  #cellphone .icon-text p {
+    font-size: 16px;
+  }
+
+  #cellphone .phone-img {
+    display: none;
+  }
+
+  #cellphone .stores {
+    margin-bottom: 30px;
+  }
+
+  #cellphone .img-store img {
+    max-width: 100%;
+  }
+
+  #newPTS .img-text h3 {
+    font-size: 1.5rem;
+    white-space: normal;
+  }
+
+  #newPTS .img-text p {
+    line-height: 1.3em;
+  }
+  .top-footer .customer-service {
+    font-size: 0.78rem;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  #mobileMenu .mobile-logo {
+    max-width: 80%;
+  }
+
+  #bookingForm {
+    margin-top: -20vh;
+  }
+
+  #bookingForm .wrapper {
+    padding: 12px 10px;
+  }
+
+  #bookingForm .input-location {
+    padding: 0.6em;
+    width: -webkit-fill-available;
+  }
+
+  #bookingForm .radio-inline {
+    font-size: 14px;
+  }
+
+  #bookingForm .center-mobile {
+    text-align: center;
+  }
+
+  #bannerVideo .title-banner h2 {
+    font-size: 40px;
+  }
+
+  #bannerVideo .title-banner h3 {
+    font-size: 16px;
+  }
+
+  #services .title h2 {
+    font-size: 32px;
+  }
+
+  #services .title h3 {
+    font-size: 15px;
+  }
+
+  #services .texts p,
+  #services .learn-more-paragraph {
+    font-size: 14px;
+    text-align: justify;
+  }
+
+  #services .card-front,
+  #services .card-back {
+    text-align: center;
+  }
+
+  #services .card-front h3 {
+    font-size: 45px;
+  }
+  #services .card-front p {
+    font-size: 20px;
+  }
+  #services .card-back p {
+    font-size: 14px;
+  }
+
+  #services .car-img {
+    margin-bottom: -9vh;
+  }
+
+  #services .pax-luggage span {
+    font-size: 14px;
+    margin-left: 0;
+  }
+
+  #services .pax-luggage .circle {
+    height: 25px;
+    width: 25px;
+  }
+
+  #services .pax-luggage .circle i {
+    padding: 0.2em 0;
+    font-size: 14px;
+  }
+
+  #newPTS .headers h2 {
+    font-size: 35px;
+  }
+  #newPTS .headers h5 {
+    font-size: 18px;
+  }
+
+  #newPTS .img-text p {
+    text-align: justify;
+  }
+
+  #newPTS .headers {
+    padding: 30px;
+  }
+
+  footer .bottom-footer .footer-text {
+    text-align: center;
+  }
+  footer .bottom-footer .footer-text p {
+    font-size: 12px;
   }
 }
