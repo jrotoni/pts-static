@@ -552,7 +552,7 @@ footer .bottom-footer .footer-text p {
   }
 }
 
-@media (min-width: 230px) and (max-width: 1024px) {
+@media (min-width: 230px) and (max-width: 1023px) {
   #desktopMenu {
     display: none;
   }
@@ -742,8 +742,8 @@ footer .bottom-footer .footer-text p {
   #newPTS .img-text p {
     line-height: 1.3em;
   }
-  .top-footer .customer-service {
-    font-size: 0.78rem;
+  .top-footer {
+    overflow: hidden;
   }
 }
 
@@ -757,7 +757,11 @@ footer .bottom-footer .footer-text p {
   }
 
   #bookingForm .wrapper {
-    padding: 12px 10px;
+    padding: 15px 10px;
+  }
+
+  #bookingForm .quote-div {
+    padding: 15px;
   }
 
   #bookingForm .input-location {
@@ -781,6 +785,9 @@ footer .bottom-footer .footer-text p {
     font-size: 16px;
   }
 
+  #services .bg-name {
+    visibility: hidden;
+  }
   #services .title h2 {
     font-size: 32px;
   }
