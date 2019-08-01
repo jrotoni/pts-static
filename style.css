@@ -277,6 +277,7 @@ header #mainMenu li {
   font-weight: 600;
   padding: 6px 20px;
   background-color: #fff;
+  margin-left: 5px;
 }
 
 .card-front .btn:hover {
@@ -337,6 +338,32 @@ header #mainMenu li {
 
 .carousel-indicators .active {
   background-color: #000;
+}
+
+.pax-luggage {
+  display: inline-block;
+  margin-bottom: 25px;
+  color: #7a7a7a;
+  font-weight: 500;
+}
+
+.pax-luggage span {
+  margin-left: 5px;
+}
+
+.pax-luggage .circle {
+  background-color: #d8262b;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: inline-block;
+  text-align: center;
+  margin-left: 5px;
+}
+
+.pax-luggage .circle i {
+  color: #fff;
+  padding: 0.4em 0;
 }
 
 #cellphone {

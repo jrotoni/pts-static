@@ -505,6 +505,20 @@
                         <div class="card-front card${items.id}">
                           <p>${items.slogan}</p>
                           <h3>${items.name}</h3>
+                          <div class="service-max">
+                            <div class="pax-luggage">
+                              <div class="circle">
+                                <i class="fa fa-user"></i>
+                              </div>
+                              <span>${items.maxPassengers} max</span>
+                            </div>
+                            <div class="pax-luggage">
+                              <div class="circle">
+                                <i class="fa fa-suitcase"></i>
+                              </div>
+                              <span>${items.maxLuggages} max</span>
+                            </div>
+                          </div>
                           <button type="button" 
                           class="btn view-btn" 
                           id="${items.id}">View Details</button>
@@ -565,5 +579,17 @@
         // });
       });
     </script>
+    <!-- <div class="service-max">
+        <div class="pax-luggage">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-user fa-stack-1x fa-inverse"></i>
+            <span>${items.maxPassengers} max</span>
+        </div>
+        <div class="pax-luggage">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-suitcase fa-stack-1x fa-inverse"></i>
+            <span>${items.maxLuggages} max</span>
+        </div>
+      </div> -->
   </body>
 </html>
