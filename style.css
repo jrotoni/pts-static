@@ -62,7 +62,7 @@
 #bannerVideo {
   background-color: #d8262b;
   height: 75vh;
-  background: url(/images/Car-static-img.png) 50% 50%;
+  /* background: url(/images/Car-static-img.png) 50% 50%; */
   background-size: cover;
   position: relative;
 }
